@@ -1,0 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Lexend;
+  list-style: none;
+  text-decoration: none;
+}
+a{
+  color: inherit;  
+}
+.margin{
+max-width: 2000px;
+margin-left: 0;
+margin-right: 0;
+}
+img{
+  max-width: 1850px;
+}
