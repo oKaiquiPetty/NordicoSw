@@ -1,6 +1,6 @@
 @import url(global.css);
 body{
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.81) 15.63%, rgba(0, 0, 0, 0.45) 37.5%, rgba(0, 0, 0, 0.45) 76.56%, rgba(0, 0, 0, 0.81) 93.75%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.81) 13.02%, rgba(0, 0, 0, 0.62) 48.96%, rgba(0, 0, 0, 0.81) 93.75%);
   
 }
 .header-background{
@@ -42,22 +42,21 @@ body{
   color: #fafbfd; padding-right: 50px;
 
 }
-.inicial{
-  background-image: url(https://i.pinimg.com/originals/61/12/3d/61123d1f7c5b6d02626d8012838ac18e.jpg) cover no-repeat;
- 
+.inicial{ 
 width: 1850px;
 height: 680px;
- 
+display: flex;
+ color: #ffffff;
 }
 
 .inicial-conteudo{
-  
-  margin-left: 20%;
-  
+   display: block;
+  margin-left: 5%;
+  margin-top: 2%;
   width: 600px;
-height: 500px;
+height: 500px;  
   border-radius: 87px;
-background: linear-gradient(180deg, #010101 25%, rgba(144, 139, 139, 0.48) 100%);
+background: linear-gradient(180deg, #010101 25%, rgba(76, 73, 73, 0.48) 100%);
   color: #fafbfd;
 }
 .inicial-conteudo h1, .dashboard h1, .site-h1{
@@ -74,7 +73,7 @@ background: linear-gradient(180deg, #010101 25%, rgba(144, 139, 139, 0.48) 100%)
   padding-left: 50px;
 }
 
-.inicial-conteudo a, .dashboard a{
+.inicial-conteudo a{
   margin-left: 80px;
   background-color: #000000;
   padding: 10px 18px;
@@ -82,86 +81,97 @@ background: linear-gradient(180deg, #010101 25%, rgba(144, 139, 139, 0.48) 100%)
   color: #fafbfd;
   box-shadow: 0px 3px 1px #868C9F;
   margin-left: 200px;
+  
 }
 
-.sobre-nos{
+.mudandovida{
   display: grid;
-  grid-template-columns: 500px 2fr;
+  grid-template-columns: 500px 5fr;
   justify-items: left;
   align-items: center;
+  padding-bottom: 100px;
+  border-top:  #11DBE8 solid 1px;;
+  padding-left: 25%;
+  color: #ffffff;
+  padding-top: 5%;
 }
-.sobre-nos-img img{
+.mudandovida-img img{
   display: flex;
   padding-left: 100px;
-  width: 600pxpx;
+  width: 600px;
   padding-top: 30px;
 }
-.sobre-nos-conteudo h3, .cultura h3{
-  color: #08102B;
+.mudandovida-conteudo h3, .cultura h3{
+  color: #ffffff;
   font-size: 50px;
   max-width: 22ch;
   padding-bottom: 100px;
 }
-.sobre-nos-conteudo h2, .cultura h2{
+.mudandovida-conteudo h2, .cultura h2{
   font-size: 32px;
   padding-bottom: 32px;
 }
-.sobre-nos-conteudo p, .cultura p{
+.mudandovida-conteudo p, .cultura p{
   font-size: 30px;
   padding-bottom: 28px;
 }
 .cultura-conteudo{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 84px;
-  align-items: start;
-  padding-bottom: 64px;
-  
+  display: block;
+  padding-bottom: 100px;
+  padding-left: 20%;
+  border-top:  #11DBE8 solid 1px;;
+  padding-top: 100px;
+  color: #fafbfd;
 }
 .cultura-conteudo p{
   
+  padding: 5%;
+  padding-bottom: 2%;
+}
+.cultura-conteudo h1{
+  color: #11DBE8;
+ padding-left: 20%;
+ font-size: 60px;
+}
+.começar-conteudo h1{
+  color: #11DBE8;;
+ font-size: 80px;
+ padding-bottom: 50px
+}
+.começar-conteudo {
   
-}
-.cultura-segurança, .cultura-relacionamento{
+  display: block;
+  padding-bottom: 100px;
+  padding-left: 30%;
+  border-top:  #6580da solid 1px;
+  padding-top: 100px;
+  color: #fafbfd;
 
 }
-.cultura-segurança h2, .cultura-relacionamento h2{
- 
-}
-.cultura-conteudo img{
+.começar-conteudo a{
+  margin-left: 80px;
+  background-color: #000000;
+  padding: 20px 28px 20px 22px;
+  border-radius: 100px;
+  color: #fafbfd;
+  box-shadow: 0px 3px 1px #868C9F;
+  margin-left: 15%;
   
-
-}
-.cultura-segurança{
   
-}
-.cultura, .sobre-nos, .inicial{
- 
-}
-
-
-
-.dashboard-conteudo{
- 
-}
-.dashboard-conteudo h1{
- 
-}
-.dashboard-conteudo p{
-
+  
 }
 .footer {
+  border-top:  #6580da solid 1px;;
   background-color: #010101f5;
-  width: 1850px;
+  width: 1860px;
 }
 .footer-conteudo{
   display: flex;
-  color: #fafbfd;
+  color: #fefeff;
   justify-content:space-evenly;
   justify-items:center;
-padding-top: 10px;
+padding-top: 30px;
 padding-bottom: 24px;
-margin-right: 250px;
 margin-top: 10px;
 
 }
@@ -169,18 +179,22 @@ margin-top: 10px;
   padding-bottom: 24px;
   text-align: center;
   font-size: 24px;
-  padding-left: 200px; 
+  padding-left: 90px; 
+  color: #ffffff;
 }
 .footer-conteudo a{
   padding-bottom: 10px;
   align-items: center;
   display: flex;
+  color: #ffffff;
+  
  
 }
 .footer-conteudo a img{
   padding-right: 10px;
   max-width: 50px;
   width: 50px;
+
 }
 .redes-icon{
 
@@ -191,7 +205,7 @@ padding-top: 10px;
 padding-bottom: 10px;
 align-items: center;
 display: flex;
-
+padding-left: 100px
 }
 
 
@@ -201,18 +215,21 @@ display: flex;
   width: 50px;
 }
 .footer-direitos{
-  border-top: #868C9F solid 1px;
-  padding-bottom: 16px;
+
+  border-top: #6580da solid 1px;
+  padding-bottom: 0px;
   padding-top: 16px;
-  grid-column: 1/4;
   color: #868C9F;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  padding-left: 40%
   
 }
 .footer-direitos span{
-  font-size: 12px;
+
+  font-size: 20px;
+  
+  display: block;
 }
 
 
