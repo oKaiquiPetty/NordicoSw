@@ -1,4 +1,6 @@
 *{
+  transform: scale(1.0); /* Igual a scaleX(2) scaleY(0.5) */
+  
   margin: 0;
   padding: 0;
   font-family: Lexend;
