@@ -1,26 +1,45 @@
 .selectvisual select{
-    width: 200px;
-    margin-left: 10%;
-    margin-bottom:10% ;
+    width: 300px;
+    margin-left: 2%;
+    margin-bottom: 5% ;
     border-radius: 10px;
-    padding-top: 2%;
-    padding-bottom: 2%;
-padding-left: 5%;
-color: rgb(0, 179, 255);
+    padding-top:-3%;
+    padding-bottom:-2%;
+padding-left: 2%;
+color: rgb(255, 255, 255);
 background-color: black;
+box-shadow: 0px 1px 2px 2px rgb(255, 0, 0);
+font-size: larger;
+}
+.selectvisual p {
+    color: antiquewhite;
+    font-size: large;
+   
 }
 
-
 .padraoimg img{
-    width: 400px;
-    border-radius: 10px;
-    border-style: inset;
-    border-color: rgb(0, 213, 255);
+    display: flex;
+    width: 700px;
+    border-radius: 50px;
+    border-style:inset;
+    border-color:rgba(255, 0, 0, 0.675);
+    margin-left: 25px;
+    
+  
+}
+.padraoimg{
+    color: antiquewhite;
+    background-color: rgba(14, 13, 13, 0.723); 
+     border-radius: 50px;
+     width: 800px ;
+     padding-left: 5%; 
+     
+     
 }
 
 .selectvisual button{
     border-radius: 10px;
-    box-shadow: 2px 2px 2px 2px rgb(0, 157, 255);
-    color:rgb(0, 179, 255) ;
+    box-shadow: 0px 1px 2px 2px rgb(255, 0, 0);
+    color:rgb(255, 255, 255) ;
     background-color: black;
 }

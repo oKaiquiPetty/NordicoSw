@@ -20,7 +20,7 @@
   height:60px ; 
   background-color: #ffffffee; 
   border-radius: 10px;
-  box-shadow: 0px 10px 10px #5c77ad;
+  box-shadow: 0px 10px 10px #a93131;
   color: #000000;
   padding-left: 5%;
  
@@ -35,7 +35,7 @@
 .div-botaolog a{
   margin-bottom: 10px;
   text-decoration: none;
-  color: #4573cd;
+  color: rgb(183, 47, 47);
  margin-left: 130px;
 }
 
