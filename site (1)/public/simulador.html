@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body >
+  <div class="alhinhamento">
+    <div class="menu">
+      
+      
+      <strong>Usuario</Strong>
+          <button onclick="movimento()"> movimentos </button>
+          <button onclick="passos()">passo a passo</button>
+          <button onclick="progresso()"> progresso</button>
+          <li><a href="site.html">home</a></li>
+        </div>
+
+    
+        <div class="alinhamento-custom">
+          
+          <div id="div_movimentar" class="selectvisual "></div>
+           
+          <div id="div_passo" class=" selectvisual"></div>
+
+          
+        </div>
+        
+
+
+        <div id="checks" class="check">
+          <p> marque como feito na caixa os movimentos executados:</p>
+          <div id="checkin" class="subcheck">
+
+            
+            swing<input type="checkbox" id="i1">
+            
+            swing180 
+             <input type="checkbox" id="i2">
+            
+            swing360  
+            <input type="checkbox" id="i3">
+            
+            
+            
+            dragon360 
+             <input type="checkbox" id="i4">
+            
+            swing540 
+             <input type="checkbox" id="i5">
+  
+  shrimp flip 
+   <input type="checkbox" id="i6">
+  
+  
+  olimpico 
+   <input type="checkbox" id="i7">
+  
+ 
+  
+saida mortal 
+ <input type="checkbox" id="19">
+
+
+</div>
+
+
+
+
+  
+  
+       <div id="graficos" class="linha-alhinhamento">
+        <div class="card-grafico">
+          <h2>progresso</h2>
+          <canvas id="myChart" style="position: relative;  height: 40vh;"></canvas>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+          <script>
+              let ctx = document.getElementById("myChart");
+      
+              let dados = {
+                datasets: [{
+                      data: [50, 50],
+                      backgroundColor: ['rgb(255, 99, 132)',  'rgb(55, 99, 132)']
+                    }],
+                    
+                    labels: ['ainda no passo a passo',  'processo completo']
+              };
+      
+              let opcoes = {
+                  cutoutPercentage: 40
+              };
+      
+              
+              let meuDonutChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: dados,
+                  options: opcoes
+              });
+      
+          </script>
+      
+      
+        </div>
+        <div class="card-grafico">
+          <h2>status</h2>
+          <canvas id="tempChart" style="position: relative;  height: 40vh;"></canvas>
+        </div>
+    </div>
+  </div>
+</div>
+</body>
+
+<script>
+  
+  function movimento(){
+
+    div_movimentar.innerHTML=`
+    <p> selecione o movimento <br> que desejar:</p> <br>
+    <select  id="movimento_select">
+             <option value="1">swing</option>
+             <option value="2">swing180</option>
+             <option value="3">swing360</option>
+             <option value="4">dragon360</option>
+             <option value="5">swing540</option>
+             <option value="6">shrimp flip</option>
+             <option value="7">olimpico</option>
+             <option value="8">suicida</option>
+             <option value="9">saida mortal</option>
+ 
+      
+ </select>
+ <button onclick="exibir()"> selecionar </button>
+ <div style="margin-left:250px" id="div_movimento" class="selectvisual padraoimg"></div>
+ 
+`
+div_movimentar.style.display= "grid"
+div_passo.style.display="none"
+graficos.style.display= "none"
+checks.style.display="none"
+}
+
+
+function  exibir(){
+        var movimentocompleto = movimento_select.value
+        
+        if (movimentocompleto == 1) {
+          
+          div_movimento.innerHTML= `
+          esse é o swing: muito importante, é a base para esse esporte  
+          <br>
+          <img src="assets/passo a passo/swing/passo4.gif" >`
+
+       }
+
+     else if (movimentocompleto == 2) {
+          
+          div_movimento.innerHTML= `
+          variação de swing, aonde você sai e pega a barra do outro lado:
+          <br>
+          <img src="assets/passo a passo/swing180/4.gif" >`
+
+      }
+
+      else if (movimentocompleto == 3) {
+          
+          div_movimento.innerHTML= `
+          swing 360, variação do 180 aonde seu corpo sai em determinada altura, e vem de encontro com a barra, executando um giro em 360º
+          <br>
+          <img src="assets/passo a passo/swing360/4.gif" >`
+
+      }
+      else
+
+      if (movimentocompleto == 4) {
+          
+          div_movimento.innerHTML= `
+          essa é a variação do 360 aonde ao invés de sair da barra, você a usa como centro gravitacional, e gira sobre ela:
+          <br>
+          <img src="assets/passo a passo/dragon360/passo4.gif" >`
+
+      }else
+
+      if (movimentocompleto == 5) {
+          
+          div_movimento.innerHTML= `
+          swing 540, muito almejado entre os atletas, pois é uma junção de 180 com 360! dica o pendulo do pé é tão importante quanto a coordenação das mãos!!
+          <br>
+          <img src="assets/passo a passo/swing540/passo4.gif" >`
+
+      }else  
+
+      if (movimentocompleto == 6) {
+          
+          div_movimento.innerHTML= `
+          movimento um pouco arriscado para quem tem medo de altura, mas é incrível depois da primeira tentativa, shrimp flip, é um movimento unico muito contabilizado nos campeonatos!
+          <br>
+          <img src="assets/passo a passo/shrim/passo4.gif" >`
+
+      }else  
+
+      if (movimentocompleto == 7) {
+          
+          div_movimento.innerHTML= `
+          esse é o seu melhor amigo, ele é a transição mais importante entre um movimento e outro. <br>
+          o muscle up olimpico, é o braço direito do atleta!
+          <br>
+          <br>
+          <img style="width: 300px; margin-left: 200px"  src="assets/passo a passo/olimpico/passo4.gif" >`
+
+      }else  
+
+      if (movimentocompleto == 8) {
+          
+          div_movimento.innerHTML= `
+          não se iluda com o nome, o foi concedido, por parecer perigoso, mas é o mais simples dessa lista, só basta sair da zona de conforto, e enfrentar o medo!
+          <br>
+          <img src="assets/passo a passo/suicide/passo4.gif" >`
+
+      }else
+
+      if (movimentocompleto == 9) {
+          
+          div_movimento.innerHTML= `
+          saida mortal.
+          <br>
+          o meu favorito claro, eu tinha muito medo de fazer este movimento, depois de perder o medo, foi o mais usado por mim, e também é a melhor variação de finalização!!
+          <br><br>
+          <img src="assets/passo a passo/saidamortal/4.gif" >`
+
+      }
+      graficos.style.display= "none"
+      
+
+    }
+
+
+  function passos(){
+    graficos.style.display= "none"
+div_passo.innerHTML=`
+<p>selecione o passo a passo <br> do movimento que deseja:</p> <br>
+            <select  id="como_excutar">
+
+            <option value="10">swing</option>
+            <option value="11">swing180</option>
+            <option value="12">swing360</option>
+            <option value="13">dragon360</option>
+            <option value="14">swing540</option>
+            <option value="15">shrimp flip</option>
+            <option value="16">olimpico</option>
+            <option value="17">suicida</option>
+            <option value="18">saida mortal</option>
+
+ 
+            </select>
+            <button onclick="execute()">selecionar</button>
+            <div style=" margin-left:250px" id="div_executa" class="selectvisual padraoimg"></div>
+
+`
+div_movimentar.style.display= "none"
+div_movimento.style.display= "none"
+div_passo.style.display= "grid"
+graficos.style.display="none"
+checks.style.display= "none"
+
+
+  }
+    function execute(){
+      var passoapasso = como_excutar.value
+    
+
+      if (passoapasso == 10) {
+          
+          div_executa.innerHTML= `
+          1º para executar você precisa lembrar como é brincar <br>
+          de balanço, você joga suas pernas para frente para manter o embalo <br>
+          joga as pernas para trás para dar continuidade e agregar mais embalo!
+          <br><br>
+          <img src="assets/passo a passo/swing/passo1.gif" >
+      <br><br>    
+          2ºcom esse mesmo movimento só basta começar a aderir embalo!
+          <br>
+          <img src="assets/passo a passo/swing/passo2.gif" >
+          <br>
+          <br>
+          3º a dica para gerar mais embalo e <br> pegar velocidade suficiente para os movimentos<br> é dobrar as pernas como mostrado abaixo e esticar quando estiver voltando.
+          <br><br>
+          <img src="assets/passo a passo/swing/passo3.gif" >
+          <br><br>
+
+          4º para sair da barra com segurança é <br> importante que você empurre seu corpo para cima, jogando seus branços para baixo!(protração de escapula).
+          <br><br>
+          <img src="assets/passo a passo/swing/passo4.gif" >`
+
+       }
+
+     else if (passoapasso == 11) {
+          
+          div_executa.innerHTML= `
+          1º tente passar a mão para o outro lado da barra, apenas dê um tapinha e avance para a próxima etapa
+          <img src="assets/passo a passo/swing180/1.gif">
+          2º  tente bater na barra assim, que seu corpo ameaçar fazer a rotação, assim você tera uma noção do tempo correto de pega-la sem sofrer lesões.
+          <img src="assets/passo a passo/swing180/2.gif">
+          <br>
+          3ºexecute o movimento uma vez e saia da barra.
+          <img src="assets/passo a passo/swing180/3.gif">
+          4º após ter o domínio do movimento, faça no mínimo 3 repetições desse movimento consecutivamente!
+          <img src="assets/passo a passo/swing180/4.gif" >`
+
+      }
+
+     else if (passoapasso == 12) {
+          
+          div_executa.innerHTML= `
+          <br>
+          1º faça o movimento de swing e saia da barra  levando seu corpo em rotação para esquerda ou direita
+          <img src="assets/passo a passo/swing360/1.gif">
+          <br><br>
+          2º execute o passo 1, porém agora olhe para trás e tente levar seu corpo junto! <br><br>
+          <img src="assets/passo a passo/swing360/2.gif">
+          <br><br>
+          3º complete o giro em 360º, porém comece a buscar a barra, como se fosse a ultima coisa na sua vida!!:) 
+          <img src="assets/passo a passo/swing360/3.gif"> 
+          <br>
+          4º Agarre a barra e parabéns você já pode montar um combo
+          <br>
+          <img src="assets/passo a passo/swing360/4.gif" >`
+
+      }
+      else
+
+      if (passoapasso == 13) {
+          
+          div_executa.innerHTML= `
+          1º faça o movimento de swing e gire seu tronco em direção ao seu melhor lado          
+          <img src="assets/passo a passo/dragon360/passo1.gif"
+          <br>
+          <br>
+          2ºtente buscar a barra em direção a que você foi levado
+          <img src="assets/passo a passo/dragon360/passo2.gif"
+          <br>
+          3ºalcance a barra sempre olhando para cima entrelace e pegue
+          <img src="assets/passo a passo/dragon360/passo3.gif"
+          <br>
+          4ºparabéns movimento executado!!!
+          <img src="assets/passo a passo/dragon360/passo4.gif" >`
+
+      }else
+
+      if (passoapasso == 14) {
+          
+          div_executa.innerHTML= `
+          1ºeleve seu tronco e chute uma bola invisível para executar o pendulo
+          <img src="assets/passo a passo/swing540/passo2.gif">
+          <br>
+          <br>
+          2ºsolte a barra e eleve o tronco para cima executando o movimento de 360º
+          <img src="assets/passo a passo/swing540/passo4.gif" >`
+
+      }else  
+
+      if (passoapasso == 15) {
+          
+          div_executa.innerHTML= `
+          1ºeleve seu tronco de forma que seu corpo faça uma concha continue o movimento e solte a barra olhando para frente
+          <img src="assets/passo a passo/shrim/passo1.gif" >
+          <br>
+          <br>
+          tente fazer um movimento como um chute após passar da barra nunca para baixo, nem para direção contrária.
+          <img src="assets/passo a passo/shrim/passo2.gif" >
+          <br>
+          <br>
+          execute o movimento com cuidado, e com o uso de colchões 
+          <img src="assets/passo a passo/shrim/passo4.gif" >`
+
+      }else  
+
+      if (passoapasso == 16) {
+          
+          div_executa.innerHTML= `
+          principal faça um arco com o corpo como se você trouxesse seu corpo para frente!
+          <img src="assets/passo a passo/olimpico/passo1.gif"
+          <br>
+          <br>
+suba sua perna com o intuito de trazer o corpo para cima, tente fazer uma alavanca
+          <img src="assets/passo a passo/olimpico/passo2.gif"
+          <br>
+          execute os passos ao mesmo tempo pratique bastante
+          <img src="assets/passo a passo/olimpico/passo3.gif"
+          <br>
+          execute todos os passos, e eleve seu peito acima da barra, pronto!!
+          <img src="assets/passo a passo/olimpico/passo4.gif" >`
+
+      }else  
+
+      if (passoapasso == 17) {
+          
+          div_executa.innerHTML= `
+
+        
+          tente agarrar suas pernas na barra e se balance
+          <img src="assets/passo a passo/suicide/passo2.gif">
+          <br>
+          solte suas mãos e continue se balançando mantenha as pernas firme!
+          <img src="assets/passo a passo/suicide/passo3.gif">
+          <br>
+          olhe para cima quando você estiver alto e solte as pernas!! execute com colchões
+          <img src="assets/passo a passo/suicide/passo4.gif" >`
+
+      }else
+
+      if (passoapasso == 18) {
+          
+          div_executa.innerHTML= `
+          execute com certeza com colchão faça o movimento de concha sem soltar a barra
+            <img src="assets/passo a passo/saidamortal/1.gif" >
+          <br>
+          tente executar balançando
+          <img src="assets/passo a passo/saidamortal/2.gif" >
+          <br>
+ este é um movimento psicologico, faça varias vezes antes de executar         
+          <img src="assets/passo a passo/saidamortal/3.gif" >
+          <br>
+          <img src="assets/passo a passo/saidamortal/4.gif" >`
+
+      }
+
+    }
+
+  
+
+
+
+
+
+
+function alinharprogresso(){
+
+  var check1 = Number(i1.value)
+  var check2 = Number(i2.value)
+  var check3 = Number(i3.value)
+  var check4 = Number(i4.value)
+  var check5 = Number(i5.value)
+  var check6 = Number(i6.value)
+  var check7 = Number(i7.value)
+  var check8 = Number(i8.value)
+  var check9 = Number(i9.value)
+  }
+
+
+
+function progresso(){
+  div_movimentar.style.display= "none"
+  div_movimento.style.display= "none"
+  graficos.style.display= "flex"
+  div_passo.style.display="none "
+  div_executa.style.display= "none"
+  checks.style.display= "block"
+  checkin.style.display="flex"
+}
+
+
+  // const é uma forma de declarar váriaveis, é uma constante, a primeira vez que ela é declarada, ela morrre desse jeito
+  
+  
+
+  const ctx1 = document.getElementById('tempChart');
+
+  new Chart(ctx1, {
+    type: 'bar',
+    data: {
+      labels: ['12h', '12h30', '13h', '13h30', '14h', '14h30', '15h', '15h30', '16h'],
+      datasets: [{
+        label: 'Sensor 1',
+        data: [40, 42, 48, 51, 55, 60, 59, 57, 52],
+        borderColor: 'red',
+        
+        borderWidth: 2
+      }, {
+        label: 'Sensor 2',
+        data: [50, 48, 45, 46, 49, 50, 55, 56, 31],
+        borderColor: 'orange',
+      
+        borderWidth: 2
+      },
+      {
+        label: 'Sensor 3',
+        data: [60, 62, 64, 61, 59, 57, 55, 52, 41],
+        borderColor: 'green',
+        
+        borderWidth: 2
+      }, {
+        label: 'Sensor 4',
+        data: [41, 44, 43, 47, 48, 49, 51, 54, 45],
+        borderColor: 'green',
+        
+        borderWidth: 2
+      }
+
+      ]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  })
+
+  
+</script>
+</html>

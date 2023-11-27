@@ -1,0 +1,47 @@
+.selectvisual select{
+    width: 300px;
+    margin-left: 2%;
+    margin-bottom: 5% ;
+    border-radius: 10px;
+    padding-top:-3%;
+    padding-bottom:-2%;
+padding-left: 2%;
+color: rgb(255, 255, 255);
+background-color: black;
+box-shadow: 0px 1px 2px 2px rgb(255, 0, 0);
+font-size: larger;
+}
+
+
+.selectvisual p {
+    color: antiquewhite;
+    font-size: large;
+   
+}
+
+.padraoimg img{
+    display: flex;
+    width: 700px;
+    border-radius: 50px;
+    border-style:inset;
+    border-color:rgba(255, 0, 0, 0.675);
+    margin-left: 25px;
+    
+  
+}
+.padraoimg{
+    color: antiquewhite;
+    background-color: rgba(14, 13, 13, 0.723); 
+     border-radius: 50px;
+     width: 800px ;
+     padding-left: 5%; 
+     
+     
+}
+
+.selectvisual button{
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px 2px rgb(255, 0, 0);
+    color:rgb(255, 255, 255) ;
+    background-color: black;
+}
